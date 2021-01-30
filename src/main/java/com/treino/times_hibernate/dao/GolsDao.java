@@ -97,7 +97,7 @@ public class GolsDao {
 			
 			EntityManager em = emf.createEntityManager();
 			
-			gols = em.createQuery("select t from Gols t", Gols.class).getResultList();
+			gols = em.createQuery("select g from Gols g", Gols.class).getResultList();
 			
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -1,10 +1,13 @@
 package com.treino.times_hibernate.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Times {
@@ -15,22 +18,23 @@ public class Times {
 	
 	private String ds_time;
 	
-	@ManyToOne
-	private Jogadores jogador;
-	
-	
+	@OneToMany
+	private List<Jogadores> jogadores;
+
 	public Times() {}
 
 	public Integer getId_time() {
 		return id_time;
 	}
 		
-	public Jogadores getJogador() {
-		return jogador;
+	public List<Jogadores> getJogador() {
+		return jogadores;
 	}
 
-	public void setJogador(Jogadores jogador) {
-		this.jogador = jogador;
+	public void setJogador(Jogadores jogadores) {
+		List<Jogadores> jogadores_time = new ArrayList<Jogadores>();
+		jogadores_time.add(jogadores);
+		this.jogadores = jogadores_time;
 	}
 	
 	public void setId_time(Integer id_time) {

@@ -17,7 +17,7 @@ public class App {
     	GolsDao golsService = new GolsDao();
         PartidasDao partidasService = new PartidasDao();
         TimesDao timesService = new TimesDao();
-        PessoasDao pessoasService = new PessoasDao();
+        //PessoasDao pessoasService = new PessoasDao();
         JogadoresDao jogadoresService = new JogadoresDao();
         
     	
@@ -32,8 +32,8 @@ public class App {
         Times time1 = new Times();
         Times time2 = new Times();
 
-        pessoasService.insere(pessoa1);
-        pessoasService.insere(pessoa2);
+//        pessoasService.insere(pessoa1);
+//        pessoasService.insere(pessoa2);
         partidasService.insere(partidas);
         timesService.insere(time1);
         timesService.insere(time2);
@@ -51,8 +51,8 @@ public class App {
         
         var jogao = partidasService.buscaPorId(1);
         
-        pessoa1.setDs_nome("Carlitos");
-        pessoa2.setDs_nome("Ceni");
+//        pessoa1.setDs_nome("Carlitos");
+//        pessoa2.setDs_nome("Ceni");
         
         tevez.addJogador(pessoa1, timao);
         ceni.addJogador(pessoa2, timinho);
@@ -80,8 +80,8 @@ public class App {
         golsService.update(gol);
         timesService.update(timao);
         timesService.update(timinho);
-        pessoasService.update(pessoa1);
-        pessoasService.update(pessoa2);        
+//        pessoasService.update(pessoa1);
+//        pessoasService.update(pessoa2);        
         jogadoresService.update(tevez);
         jogadoresService.update(ceni);
         partidasService.update(jogao);
